@@ -4,28 +4,28 @@ description: Elastic Compute Cloud (EC2) Virtual Private Cloud (VPC) SecurityGro
 
 # EC2 SecurityGroup
 
-#### Resource Type
+## Resource Type
 
 `AWS.EC2.SecurityGroup`
 
-#### Resource ID Format
+## Resource ID Format
 
 For EC2 Security Groups, the resource ID is the ARN.
 
 `arn:aws:ec2:us-west-2:123456789012:security-group/sg-1`
 
-#### Background
+## Background
 
 This resource represents a snapshot of an AWS EC2 VPC SecurityGroup.
 
-#### Fields
+## Fields
 
-| Field                 | Type   | Description                        |
-| :-------------------- | :----- | :--------------------------------- |
-| `IpPermissions`       | `List` | Inbound IP permissions             |
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `IpPermissions` | `List` | Inbound IP permissions |
 | `IpPermissionsEgress` | `List` | Outbound \(egress\) IP permissions |
 
-#### Example
+## Example
 
 ```javascript
 {
@@ -80,3 +80,4 @@ This resource represents a snapshot of an AWS EC2 VPC SecurityGroup.
     "VpcId": "vpc-1"
 }
 ```
+

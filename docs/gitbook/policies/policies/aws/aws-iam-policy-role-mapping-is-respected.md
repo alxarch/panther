@@ -1,8 +1,8 @@
 # AWS IAM Policy Role Mapping Is Respected
 
-| Risk     | Remediation Effort |
-| :------- | :----------------- |
-| **High** | **Low**            |
+| Risk | Remediation Effort |
+| :--- | :--- |
+| **High** | **Low** |
 
 This policy validates that certain policies are attached to certain roles. This can be used to ensure that certain restrictive policies are applied to certain roles to manage their access.
 
@@ -14,4 +14,5 @@ To remediate this, attach the policy to each role it is required to be attached 
 
 **Reference**
 
-- AWS [attach-role-policy](https://docs.aws.amazon.com/cli/latest/reference/iam/attach-role-policy.html) documentation
+* AWS [attach-role-policy](https://docs.aws.amazon.com/cli/latest/reference/iam/attach-role-policy.html) documentation
+

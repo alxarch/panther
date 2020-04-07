@@ -4,27 +4,27 @@ description: Elastic Load Balancer Version 2 (ELBV2) Application Load Balancer
 
 # ELBV2 Application Load Balancer
 
-#### Resource Type
+## Resource Type
 
 `AWS.ELBV2.ApplicationLoadBalancer`
 
-#### Resource ID Format
+## Resource ID Format
 
 For ELBV2 Load Balancers, the resource ID is the ARN.
 
 `arn:aws:elasticloadbalancing:us-west-2:123456789012:loadbalancer/app/example-lb/1`
 
-#### Background
+## Background
 
 This resource represents a snapshot of an AWS ELBv2 Application Load Balancer
 
-| Field         | Type     | Description                                                                                                                                                                                                              |
-| :------------ | :------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `WebAcl`      | `String` | The associated AWS WAF Web ACL ID                                                                                                                                                                                        |
-| `Listeners`   | `List`   | A list of maps, each of which corresponds to a listener on a certain port and it's associated actions                                                                                                                    |
-| `SSLPolicies` | `Map`    | A description of the SSL ciphers and protocols supported by the load balancer. For each entry in `Listeners` that contains an `SSLPolicy`, there will be a corresponding entry here with the details of that `SSLPolicy` |
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `WebAcl` | `String` | The associated AWS WAF Web ACL ID |
+| `Listeners` | `List` | A list of maps, each of which corresponds to a listener on a certain port and it's associated actions |
+| `SSLPolicies` | `Map` | A description of the SSL ciphers and protocols supported by the load balancer. For each entry in `Listeners` that contains an `SSLPolicy`, there will be a corresponding entry here with the details of that `SSLPolicy` |
 
-#### Example
+## Example
 
 ```javascript
 {
@@ -116,3 +116,4 @@ This resource represents a snapshot of an AWS ELBv2 Application Load Balancer
     "WebAcl": "1111-2222-3333"
 }
 ```
+

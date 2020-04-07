@@ -1,28 +1,28 @@
 # Lambda Function
 
-#### Resource Type
+## Resource Type
 
 `AWS.Lambda.Function`
 
-#### Resource ID Format
+## Resource ID Format
 
 For Lambda Functions, the resource ID is the ARN.
 
 `arn:aws:lambda:us-west-2:123456789012:function:example-function`
 
-#### Background
+## Background
 
 AWS Lambda is a compute service that lets you run code without provisioning or managing servers.
 
-#### Fields
+## Fields
 
-| Field         | Type     | Description                                                                                                        |
-| :------------ | :------- | :----------------------------------------------------------------------------------------------------------------- |
-| `Policy`      | `Map`    | A mapping with `Policy` \(the resource-based policy\) and `RevisionId` \(the current revision of the policy\) keys |
-| `Environment` | `Map`    | The environment variables and error state of the function                                                          |
-| `Runtime`     | `String` | The runtime environment of the function, such as `go1.x` or `python3.x`                                            |
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `Policy` | `Map` | A mapping with `Policy` \(the resource-based policy\) and `RevisionId` \(the current revision of the policy\) keys |
+| `Environment` | `Map` | The environment variables and error state of the function |
+| `Runtime` | `String` | The runtime environment of the function, such as `go1.x` or `python3.x` |
 
-#### Example
+## Example
 
 ```javascript
 {
@@ -69,3 +69,4 @@ AWS Lambda is a compute service that lets you run code without provisioning or m
     "VpcConfig": null
 }
 ```
+

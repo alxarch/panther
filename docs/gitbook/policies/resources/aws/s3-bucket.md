@@ -4,36 +4,36 @@ description: Simple Storage Service (S3) Bucket
 
 # S3 Bucket
 
-#### Resource Type
+## Resource Type
 
 `AWS.S3.Bucket`
 
-#### Resource ID Format
+## Resource ID Format
 
 For S3 Buckets, the resource ID is the ARN.
 
 `arn:aws:s3:::example-bucket`
 
-#### Background
+## Background
 
 S3 is an object storage service offered by AWS for organization of data.
 
-#### Fields
+## Fields
 
-| Field                            | Type     | Description                                                                                                                                                                                         |
-| :------------------------------- | :------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Grants`                         | `List`   | What users, groups, or roles have been granted access to this S3 bucket and what access they have been granted.                                                                                     |
-| `LifecycleRules`                 | `List`   | [Rules](https://docs.aws.amazon.com/AmazonS3/latest/API/API_LifecycleRule.html) for managing the expiration and archival of data.                                                                   |
-| `EncryptionRules`                | `List`   | [Rules](https://docs.aws.amazon.com/AmazonS3/latest/API/API_ServerSideEncryptionRule.html) for encrypting the S3 bucket.                                                                            |
-| `LoggingPolicy`                  | `Map`    | [Describes](https://docs.aws.amazon.com/AmazonS3/latest/API/API_LoggingEnabled.html) where access logs are stored.                                                                                  |
-| `MFADelete`                      | `String` | Indicates if MFA delete is Enabled on the bucket or not. If not, this value will be blank.                                                                                                          |
-| `ObjectLockConfiguration`        | `Map`    | These [configuration options](https://docs.aws.amazon.com/AmazonS3/latest/API/API_ObjectLockConfiguration.html) prevent an object from being deleted or overwritten for a specified amount of time. |
-| `Owner`                          | `Map`    | [Information](https://docs.aws.amazon.com/AmazonS3/latest/API/API_Owner.html) on the Bucket owner.                                                                                                  |
-| `Policy`                         | `String` | The IAM policy attached to the bucket.                                                                                                                                                              |
-| `Versioning`                     | `String` | `ENABLED | SUSPENDED`                                                                                                                                                                               |
-| `PublicAccessBlockConfiguration` | `Map`    | Indicates how the S3 bucket's [Block Public Access](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html) settings are configured.                               |
+| Field | Type | Description |  |
+| :--- | :--- | :--- | :--- |
+| `Grants` | `List` | What users, groups, or roles have been granted access to this S3 bucket and what access they have been granted. |  |
+| `LifecycleRules` | `List` | [Rules](https://docs.aws.amazon.com/AmazonS3/latest/API/API_LifecycleRule.html) for managing the expiration and archival of data. |  |
+| `EncryptionRules` | `List` | [Rules](https://docs.aws.amazon.com/AmazonS3/latest/API/API_ServerSideEncryptionRule.html) for encrypting the S3 bucket. |  |
+| `LoggingPolicy` | `Map` | [Describes](https://docs.aws.amazon.com/AmazonS3/latest/API/API_LoggingEnabled.html) where access logs are stored. |  |
+| `MFADelete` | `String` | Indicates if MFA delete is Enabled on the bucket or not. If not, this value will be blank. |  |
+| `ObjectLockConfiguration` | `Map` | These [configuration options](https://docs.aws.amazon.com/AmazonS3/latest/API/API_ObjectLockConfiguration.html) prevent an object from being deleted or overwritten for a specified amount of time. |  |
+| `Owner` | `Map` | [Information](https://docs.aws.amazon.com/AmazonS3/latest/API/API_Owner.html) on the Bucket owner. |  |
+| `Policy` | `String` | The IAM policy attached to the bucket. |  |
+| `Versioning` | `String` | \`ENABLED | SUSPENDED\` |
+| `PublicAccessBlockConfiguration` | `Map` | Indicates how the S3 bucket's [Block Public Access](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html) settings are configured. |  |
 
-#### Example
+## Example
 
 ```javascript
 {
@@ -108,3 +108,4 @@ S3 is an object storage service offered by AWS for organization of data.
     "Versioning": "Enabled"
 }
 ```
+

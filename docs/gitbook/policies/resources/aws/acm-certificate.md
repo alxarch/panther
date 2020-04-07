@@ -24,14 +24,14 @@ The [ACM Certificate](https://docs.aws.amazon.com/acm/latest/userguide/acm-overv
 
 The following table describes the Fields you can use:
 
-| Field                     | Type     | Description                                                                                                        |
-| :------------------------ | :------- | :----------------------------------------------------------------------------------------------------------------- |
-| `CertificateAuthorityArn` | `String` | The Amazon Resource Name to the [Private CA](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaWelcome.html) |
-| `DomainValidationOptions` | `List`   | Validation information of each domain name that occurs as a result of the `RequestCertificate` request             |
-| `FailureReason`           | `String` | The reason the certificate request failed                                                                          |
-| `NotAfter`                | `String` | The time after which the certificate is not valid                                                                  |
-| `NotBefore`               | `String` | The time before which the certificate is not valid                                                                 |
-| `Status`                  | `String` | `PENDING_VALIDATION | ISSUED | INACTIVE EXPIRED | VALIDATION_TIMED_OUT | REVOKED FAILED`                           |
+| Field | Type | Description |  |  |  |  |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| `CertificateAuthorityArn` | `String` | The Amazon Resource Name to the [Private CA](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaWelcome.html) |  |  |  |  |
+| `DomainValidationOptions` | `List` | Validation information of each domain name that occurs as a result of the `RequestCertificate` request |  |  |  |  |
+| `FailureReason` | `String` | The reason the certificate request failed |  |  |  |  |
+| `NotAfter` | `String` | The time after which the certificate is not valid |  |  |  |  |
+| `NotBefore` | `String` | The time before which the certificate is not valid |  |  |  |  |
+| `Status` | `String` | \`PENDING\_VALIDATION | ISSUED | INACTIVE EXPIRED | VALIDATION\_TIMED\_OUT | REVOKED FAILED\` |
 
 ## Example
 
@@ -121,4 +121,5 @@ The following table describes the Fields you can use:
 
 ## References
 
-- [ACM Concepts](https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html)
+* [ACM Concepts](https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html)
+

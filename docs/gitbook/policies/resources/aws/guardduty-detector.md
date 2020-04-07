@@ -1,10 +1,10 @@
 # GuardDuty Detector
 
-#### Resource Type
+## Resource Type
 
 `AWS.GuardDuty.Detector`
 
-#### Resource ID Format
+## Resource ID Format
 
 For GuardDuty Detector resources, the resource ID is constructed as such:
 
@@ -16,18 +16,18 @@ Example:
 
 This allows you to differentiate between GuardDuty Detector resources across all AWS accounts you have linked by looking at the characters before the first colon, and to differentiate between GuardDuty Detector resources within an account by looking at the characters between the first and second colon.
 
-#### Background
+## Background
 
 This resource represents a snapshot of an AWS GuardDuty detector.
 
-#### Fields
+## Fields
 
-| Field    | Type     | Description                                                                |
-| :------- | :------- | :------------------------------------------------------------------------- |
-| `Master` | `Map`    | The master GuardDuty detector this account is subscribed to, if one exists |
-| `Status` | `String` | Indicates whether the detector is `ENABLED` or `DISABLED`                  |
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `Master` | `Map` | The master GuardDuty detector this account is subscribed to, if one exists |
+| `Status` | `String` | Indicates whether the detector is `ENABLED` or `DISABLED` |
 
-#### Example
+## Example
 
 ```javascript
 {
@@ -52,3 +52,4 @@ This resource represents a snapshot of an AWS GuardDuty detector.
     "UpdatedAt": "2019-01-01T00:00:00.000Z"
 }
 ```
+

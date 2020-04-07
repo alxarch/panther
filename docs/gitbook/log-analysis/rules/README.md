@@ -4,11 +4,11 @@ Panther enables easy aggregation, normalization, analysis, and storage of securi
 
 ## Rule Components
 
-- A `rule` function with an `event` argument that returns `True` if the rule should send an alert, or `False` if it should not
-- Optionally, a `dedup` function to control how alerts are grouped together
-- Optionally, a `title` function to define the message shown in the alert
-- Metadata containing context for triage
-- An association with a specific Log Type
+* A `rule` function with an `event` argument that returns `True` if the rule should send an alert, or `False` if it should not
+* Optionally, a `dedup` function to control how alerts are grouped together
+* Optionally, a `title` function to define the message shown in the alert
+* Metadata containing context for triage
+* An association with a specific Log Type
 
 As an example, the rule below checks if unauthenticated access occurred on an S3 bucket:
 
@@ -32,28 +32,29 @@ def title(event):
     return 'Unauthenticated Access to S3 Bucket  {}'.format(event.get('bucket'))
 ```
 
-- This rule will group alerts by the bucket name
-- Alerts will have a title such as `Unauthenticated Access to S3 Bucket my-super-secret-data`
+* This rule will group alerts by the bucket name
+* Alerts will have a title such as `Unauthenticated Access to S3 Bucket my-super-secret-data`
 
 ## Rule Packs
 
 By default, rules are pre-installed from Panther's [open-source packs](https://github.com/panther-labs/panther-analysis) and cover baseline detections and examples across supported log types:
 
-- AWS CIS
-- AWS Best Practices
-- AWS Samples (VPC, S3, CloudTrail, and more)
-- Osquery CIS
-- Osquery Samples
+* AWS CIS
+* AWS Best Practices
+* AWS Samples \(VPC, S3, CloudTrail, and more\)
+* Osquery CIS
+* Osquery Samples
 
-## Workflow
+## Rule Writing Workflow
 
-Panther rules can be written, tested, and deployed either with the UI or the [panther_analysis_tool](https://github.com/panther-labs/panther_analysis_tool) CLI utility.
+Panther rules can be written, tested, and deployed either with the UI or the [panther\_analysis\_tool](https://github.com/panther-labs/panther_analysis_tool) CLI utility.
 
-Each rule takes an `event` input of a given log type from the [supported logs](../supported-logs/README.md) page.
+Each rule takes an `event` input of a given log type from the [supported logs](https://github.com/panther-labs/panther/tree/a13d1524b032066c911dca418cd33d40f1f4f533/docs/gitbook/log-analysis/rules/log-analysis/supported-logs/README.md) page.
 
 ### Rule Body
 
 The rule body MUST:
+
 * Be valid Python3
 * Define a `rule()` function that accepts one argument
 * Return a `bool` from the rule function
@@ -64,9 +65,11 @@ def rule(event):
 ```
 
 The Python body SHOULD:
+
 * Name the argument to the `rule()` function `event`
 
 The Python body MAY:
+
 * Import standard Python3 libraries
 * Import from the user defined `aws_globals` file
 * Define additional helper functions as needed
@@ -74,13 +77,13 @@ The Python body MAY:
 * Define a `dedup` function that accepts one argument and returns a `string`
 * Define a `title` function that accepts one argument and returns a `string`
 
-Using the schemas in [supported logs](../supported-logs/README.md) provides details on all available fields in events. When accessing event fields, it's recommend to always use `.get()` since empty key/values are omitted from the event.
+Using the schemas in [supported logs](https://github.com/panther-labs/panther/tree/a13d1524b032066c911dca418cd33d40f1f4f533/docs/gitbook/log-analysis/rules/log-analysis/supported-logs/README.md) provides details on all available fields in events. When accessing event fields, it's recommend to always use `.get()` since empty key/values are omitted from the event.
 
 #### Example Rule
 
-For example, let's write a rule on an [NGINX Access](../supported-logs/nginx.md#nginx.access) log:
+For example, let's write a rule on an [NGINX Access](https://github.com/panther-labs/panther/tree/a13d1524b032066c911dca418cd33d40f1f4f533/docs/gitbook/log-analysis/rules/log-analysis/supported-logs/nginx/README.md#nginx-access) log:
 
-```json
+```javascript
 {
   "bodyBytesSent": 193,
   "httpReferer": "https://domain1.com/?p=1",
@@ -98,35 +101,37 @@ This example rule alerts on successful admin panel logins:
 def rule(event):
   if 'admin-panel' in event.get('request') and event.get('status') == 200:
     return True
+
   return False
 ```
 
 In the `rule()` body, returning a value of `True` indicates an alert should send. Returning a value of `False` indicates the log is not suspicious.
 
-### Alert Deduplication
+### Rule Deduplication
 
-To avoid a flood of alerts, events are grouped together within a given time period and associated with a single `alertID`.
+Alerts group together all events that matched a rule for the period configured in the rule settings. By default, this deduplication is based on `default:RuleID` over the period of 1 hour.
 
-By default, events are merged by the key `defaultDedupString:${RuleID}` over a period of `1h`. Each of these options are fully configurable.
-
-{% hint style="warn" %}
-The deduplication string is limited to `1000` characters and will be truncated if it goes over.
-{% endhint %}
-
-To modify the merge key, use the `dedup()` function in your rule body. The same parsed log `event` is passed into this function, and you may use any logic desired to return the `dedupString`. If a Falsy value is returned from `dedup()`, then the default string will be used.
-
-The `dedupPeriodMinutes` may be set to either `15m`, `30m`, `1h`, `3h`, `12h`, or `24h`.
-
-To keep with the previous example, all events will merge on the requested webpage:
+To modify the merge logic, you can use the `dedup()` in your rule body:
 
 ```python
 def dedup(event):
   return event.get('request', '').split(' ')[1]
 ```
 
+In this example, all alerts will merge on the requested page of `/admin-panel/`.
+
+The merging period is also configurable an can be set to:
+
+* 15m
+* 30m
+* 1h
+* 3h
+* 12h
+* 24h
+
 ### Alert Titles
 
-Alert titles, sent to our destinations, are by default `New Alert: ${Rule Description}`. To override this message, use the `title()` function:
+Alert titles, sent to our destinations, are by default `New Alert: #{Rule Description}`. To override this message, use the `title()` function:
 
 ```python
 def title(event):
@@ -148,7 +153,7 @@ Then, configure the built in rules by searching for the `Configuration Required`
 
 ## Writing Rules in the Panther UI
 
-Navigate to Log Analysis > Rules, and click `Create New` in the top right corner. You have the option of creating a single new rule, or uploading a zip file containing rules created with the `panther_analysis_tool`.
+Navigate to Log Analysis &gt; Rules, and click `Create New` in the top right corner. You have the option of creating a single new rule, or uploading a zip file containing rules created with the `panther_analysis_tool`.
 
 ![](../../.gitbook/assets/write-rules-ui-1.png)
 
@@ -176,7 +181,7 @@ Now, when any `NGINX.Access` logs are sent to Panther this rule will automatical
 
 ## Writing Rules with the Panther Analysis Tool
 
-The `panther_analysis_tool` is a Python command line interface  for testing, packaging, and deploying Panther Policies and Rules. This enables teams to work in a more developer oriented workflow and track detections with version control systems such as `git`.
+The `panther_analysis_tool` is a Python command line interface for testing, packaging, and deploying Panther Policies and Rules. This enables teams to work in a more developer oriented workflow and track detections with version control systems such as `git`.
 
 ### Installation
 
@@ -185,7 +190,7 @@ The `panther_analysis_tool` is available on pip!
 Simply install with:
 
 ```bash
-pip3 install panther-analysis-tool
+pip3 install panther_analysis_tool
 ```
 
 ### Running Tests
@@ -210,7 +215,7 @@ Rules with the same ID are overwritten. Locally deleted rules will not automatic
 
 Navigate to the repository/path for your custom detections. We recommend grouping detections based on purpose, such as `suricata_rules` or `internal_pci`. Use the open source [Panther Analysis](https://github.com/panther-labs/panther-analysis) packs as a reference.
 
-Each new rule consists of a Python file (`<my-rule>.py`) containing your rule, dedup, and title functions, and a YAML/JSON specification (`<my-rule>.yml`) with rule attributes.
+Each new rule consists of a Python file \(`<my-rule>.py`\) containing your rule, dedup, and title functions, and a YAML/JSON specification \(`<my-rule>.yml`\) with rule attributes.
 
 ### Rule Body
 
@@ -224,6 +229,7 @@ The specification file MUST:
 * Define an `AnalysisType` field with the value `rule`
 
 Define the additional following fields:
+
 * `Enabled`
 * `FileName`
 * `RuleID`
@@ -232,7 +238,7 @@ Define the additional following fields:
 
 An example specification file:
 
-```yml
+```text
 AnalysisType: rule
 Enabled: true
 Filename: my_new_rule.py
@@ -253,7 +259,7 @@ Reference: https://www.link-to-info.io
 
 In our spec file, add the following key:
 
-```yml
+```text
 Tests:
   -
     Name: Name to describe our first test.
@@ -269,11 +275,11 @@ Tests:
 
 Python provides high flexibility in defining your rules, and the following libraries are available to be used in Panther's runtime environment:
 
-| Package          | Version   | Description                 | License   |
-| :--------------- | :-------- | :-------------------------- | :-------- |
-| `boto3`          | `1.10.46` | AWS SDK for Python          | Apache v2 |
+| Package | Version | Description | License |
+| :--- | :--- | :--- | :--- |
+| `boto3` | `1.10.46` | AWS SDK for Python | Apache v2 |
 | `policyuniverse` | `1.3.2.1` | Parse AWS ARNs and Policies | Apache v2 |
-| `requests`       | `2.22.0`  | Easy HTTP Requests          | Apache v2 |
+| `requests` | `2.22.0` | Easy HTTP Requests | Apache v2 |
 
 To add more libraries, edit the `PipLayer` below in the `panther_config.yml`:
 
@@ -290,3 +296,4 @@ Alternatively, you can override the runtime libraries by attaching a Lambda laye
 BackendParameterValues:
   PythonLayerVersionArn: 'arn:aws:lambda:us-east-2:123456789012:layer:my-layer:3'
 ```
+

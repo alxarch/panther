@@ -4,29 +4,29 @@ description: Identity and Access Management (IAM) User
 
 # IAM User
 
-#### Resource Type
+## Resource Type
 
 `AWS.IAM.User`
 
-#### Resource ID Format
+## Resource ID Format
 
 For IAM Users, the resource ID is the ARN.
 
 `arn:aws:iam::123456789012:user/example-user`
 
-#### Background
+## Background
 
 This resource represents a snapshot for an AWS IAM user.
 
-#### Fields
+## Fields
 
-| Field                | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| :------------------- | :----- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CredentialReport`   | `Map`  | This is a recent credential report generated for this user, including information such as whether password login is enabled, the last time access keys were rotated, whether MFA is required for logins, etc. `GeneratedDate` indicates at what time the credential report was generated, it is only generated approximately once every four hours and re-used in between. This is due to limitations in the AWS API. If a field requires a timestamp but was returned empty or as `no_information` or `N/A` or `not_supported` by AWS, it defaults to `0001-01-01T00:00:00Z`. Be sure to write policies accordingly. |
-| `InlinePolicies`     | `Map`  | A mapping of inline policy names to their policy documents                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `ManagedPolicyNames` | `List` | AWS managed policies assigned to the user                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `CredentialReport` | `Map` | This is a recent credential report generated for this user, including information such as whether password login is enabled, the last time access keys were rotated, whether MFA is required for logins, etc. `GeneratedDate` indicates at what time the credential report was generated, it is only generated approximately once every four hours and re-used in between. This is due to limitations in the AWS API. If a field requires a timestamp but was returned empty or as `no_information` or `N/A` or `not_supported` by AWS, it defaults to `0001-01-01T00:00:00Z`. Be sure to write policies accordingly. |
+| `InlinePolicies` | `Map` | A mapping of inline policy names to their policy documents |
+| `ManagedPolicyNames` | `List` | AWS managed policies assigned to the user |
 
-#### Example
+## Example
 
 ```javascript
 {
@@ -85,3 +85,4 @@ This resource represents a snapshot for an AWS IAM user.
     }
 }
 ```
+

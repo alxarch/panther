@@ -4,28 +4,28 @@ description: Key Management Service (KMS) Key
 
 # KMS Key
 
-#### Resource Type
+## Resource Type
 
 `AWS.KMS.Key`
 
-#### Resource ID Format
+## Resource ID Format
 
 For KMS Keys, the resource ID is the ARN.
 
 `arn:aws:kms:us-west-2:123456789012:key/1`
 
-#### Background
+## Background
 
 KMS is a service to create and manage encryption keys for across a wide range of AWS services and within your applications.
 
-#### Fields
+## Fields
 
-| Field                | Type     | Description                                                   |
-| :------------------- | :------- | :------------------------------------------------------------ |
-| `KeyRotationEnabled` | `Bool`   | If key rotation is enabled for this KMS key                   |
-| `Policy`             | `String` | A JSON policy document indicating what has access to this key |
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `KeyRotationEnabled` | `Bool` | If key rotation is enabled for this KMS key |
+| `Policy` | `String` | A JSON policy document indicating what has access to this key |
 
-#### Example
+## Example
 
 ```javascript
 {
@@ -52,3 +52,4 @@ KMS is a service to create and manage encryption keys for across a wide range of
     "ValidTo": null
 }
 ```
+

@@ -1,8 +1,8 @@
 # AWS EC2 Instance Running on Approved AMI
 
-| Risk     | Remediation Effort |
-| :------- | :----------------- |
-| **High** | **Low**            |
+| Risk | Remediation Effort |
+| :--- | :--- |
+| **High** | **Low** |
 
 This policy validates that each EC2 Instance is running on an approved AMI. This prevents instances from being launched from unexpected AMI's, for example AMI's being launched by an attacker for crypto currency mining.
 
@@ -16,4 +16,5 @@ To remediate this, terminate any instances running with an unapproved AMI. Those
 
 **Reference**
 
-- AWS EC2 [AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html) documentation
+* AWS EC2 [AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html) documentation
+

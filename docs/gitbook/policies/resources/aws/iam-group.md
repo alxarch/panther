@@ -4,30 +4,30 @@ description: Identity and Access Management (IAM) Group
 
 # IAM Group
 
-#### Resource Type
+## Resource Type
 
 `AWS.IAM.Group`
 
-#### Resource ID Format
+## Resource ID Format
 
 For IAM Groups, the resource ID is the ARN.
 
 `arn:aws:iam::123456789012:group/example-group`
 
-#### Background
+## Background
 
 An IAM group is a collection of IAM users. Groups let you specify permissions for multiple users, which can make it easier to manage the permissions for those users.
 
-#### Fields
+## Fields
 
-| Field                | Type     | Description                                                             |
-| :------------------- | :------- | :---------------------------------------------------------------------- |
-| `Users`              | `List`   | The IAM User members of the group                                       |
-| `InlinePolicies`     | `Map`    | A mapping of inline policies keyed by PolicyName to the Policy Document |
-| `ManagedPolicyNames` | `List`   | The AWS Managed Policy names attached to the group                      |
-| `Path`               | `String` | The path to the group                                                   |
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `Users` | `List` | The IAM User members of the group |
+| `InlinePolicies` | `Map` | A mapping of inline policies keyed by PolicyName to the Policy Document |
+| `ManagedPolicyNames` | `List` | The AWS Managed Policy names attached to the group |
+| `Path` | `String` | The path to the group |
 
-#### Example
+## Example
 
 ```javascript
 {
@@ -59,3 +59,4 @@ An IAM group is a collection of IAM users. Groups let you specify permissions fo
     ]
 }
 ```
+

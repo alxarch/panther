@@ -1,27 +1,27 @@
 # DynamoDB Table
 
-#### Resource Type
+## Resource Type
 
 `AWS.DynamoDB.Table`
 
-#### Resource ID Format
+## Resource ID Format
 
 For DynamoDB Tables, the resource ID is the ARN.
 
 `arn:aws:dynamodb:us-east-2:123456789012:table/example-table`
 
-#### Background
+## Background
 
 This resource represents a snapshot of an AWS DynamoDB Table.
 
-#### Fields
+## Fields
 
-| Field                     | Description                                                                                                        |
-| :------------------------ | :----------------------------------------------------------------------------------------------------------------- |
-| `SSEDescription`          | Details how and if server side encryption is configured                                                            |
+| Field | Description |
+| :--- | :--- |
+| `SSEDescription` | Details how and if server side encryption is configured |
 | `AutoScalingDescriptions` | Details on how dynamically adjusting provisioned throughput capacity in response to traffic patterns is configured |
 
-#### Example
+## Example
 
 ```javascript
 {
@@ -103,3 +103,4 @@ This resource represents a snapshot of an AWS DynamoDB Table.
     }
 }
 ```
+

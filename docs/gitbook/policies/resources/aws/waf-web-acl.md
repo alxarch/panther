@@ -4,11 +4,11 @@ description: Web Application Firewall (WAF) Web Access Control List (ACL)
 
 # WAF Web ACL
 
-#### Resource Types
+## Resource Types
 
 `AWS.WAF.WebACL`, `AWS.WAF.Regional.WebACL`
 
-#### Resource ID Format
+## Resource ID Format
 
 For WAF Web ACLs, the resource ID is the ARN.
 
@@ -16,23 +16,23 @@ For WAF Web ACLs, the resource ID is the ARN.
 
 `arn:aws:waf-regional:us-west-2:123456789012:webacl/1`
 
-#### Background
+## Background
 
 A web access control list \(web ACL\) gives you fine-grained control over the web requests that your Amazon API Gateway API, Amazon CloudFront distribution or Application Load Balancer responds to. Global Web ACLs apply to CloudFront and API Gateway. Regional Web ACLs apply to load balancers.
 
 WAF Regional and Global ACLs are represented in the same fashion, the distinction is made to assist in writing rules for the correct scope.
 
-#### Fields
+## Fields
 
 [WebACL Reference](https://docs.aws.amazon.com/waf/latest/APIReference/API_WebACL.html)
 
-| Field           | Type     | Description                                                                                                       |
-| :-------------- | :------- | :---------------------------------------------------------------------------------------------------------------- |
-| `Rules`         | `List`   | Lists each rule being applied by the WebACL, its priority \(ordering\), and the action taken, among other things. |
-| `DefaultAction` | `Map`    | The default action for AWS WAF to allow web requests or to block web requests.                                    |
-| `MetricName`    | `String` | A friendly name or description for the metrics for this WebACL.                                                   |
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `Rules` | `List` | Lists each rule being applied by the WebACL, its priority \(ordering\), and the action taken, among other things. |
+| `DefaultAction` | `Map` | The default action for AWS WAF to allow web requests or to block web requests. |
+| `MetricName` | `String` | A friendly name or description for the metrics for this WebACL. |
 
-#### Example
+## Example
 
 ```javascript
 {
@@ -91,3 +91,4 @@ WAF Regional and Global ACLs are represented in the same fashion, the distinctio
     "TimeCreated": null
 }
 ```
+

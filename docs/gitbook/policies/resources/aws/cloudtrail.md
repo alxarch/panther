@@ -1,27 +1,27 @@
 # CloudTrail
 
-#### Resource Type
+## Resource Type
 
 `AWS.CloudTrail`
 
-#### Resource ID Format
+## Resource ID Format
 
 For CloudTrail Trails, the resource ID is the ARN.
 
 `arn:aws:cloudtrail:us-west-2:123456789012:trail/example-trail`
 
-#### Background
+## Background
 
 The [CloudTrail](https://aws.amazon.com/cloudtrail/) resource represents the system within AWS responsible for tracking account activity.
 
-#### Fields
+## Fields
 
-| Field            | Type   | Description                                                                                                                |
-| :--------------- | :----- | :------------------------------------------------------------------------------------------------------------------------- |
-| `EventSelectors` | `List` | The collection of management and data event settings across each CloudTrail in each region                                 |
-| `Status`         | `Map`  | CloudTrail [status](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_GetTrailStatus.html) of last events. |
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `EventSelectors` | `List` | The collection of management and data event settings across each CloudTrail in each region |
+| `Status` | `Map` | CloudTrail [status](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_GetTrailStatus.html) of last events. |
 
-#### Example
+## Example
 
 ```javascript
 {
@@ -79,3 +79,4 @@ The [CloudTrail](https://aws.amazon.com/cloudtrail/) resource represents the sys
     "TimeCreated": null
 }
 ```
+

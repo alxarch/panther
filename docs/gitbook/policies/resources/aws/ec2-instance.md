@@ -1,27 +1,27 @@
 # EC2 Instance
 
-#### Resource Type
+## Resource Type
 
 `AWS.EC2.Instance`
 
-#### Resource ID Format
+## Resource ID Format
 
 For EC2 Instances, the resource ID is the ARN.
 
 `arn:aws:ec2:us-west-2:123456789012:instance/i-1`
 
-#### Background
+## Background
 
 This resource represents a snapshot of an AWS EC2 Instance.
 
-#### Fields
+## Fields
 
-| Field                 | Type   | Description                                                     |
-| :-------------------- | :----- | :-------------------------------------------------------------- |
-| `BlockDeviceMappings` | `List` | Lists what block devices are attached                           |
-| `NetworkInterfaces`   | `Map`  | Detailed information about the instance's network configuration |
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `BlockDeviceMappings` | `List` | Lists what block devices are attached |
+| `NetworkInterfaces` | `Map` | Detailed information about the instance's network configuration |
 
-#### Example
+## Example
 
 ```javascript
 {
@@ -160,3 +160,4 @@ This resource represents a snapshot of an AWS EC2 Instance.
     "VpcId": "vpc-1"
 }
 ```
+

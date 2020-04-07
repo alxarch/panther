@@ -4,34 +4,34 @@ description: Identity and Access Management (IAM) Policy
 
 # IAM Policy
 
-#### Resource Type
+## Resource Type
 
 `AWS.IAM.Policy`
 
-#### Resource ID Format
+## Resource ID Format
 
 For IAM Policies, the resource ID is the ARN.
 
 `arn:aws:iam::123456789012:policy/example-policy`
 
-#### Background
+## Background
 
 This resource represents an IAM policy, which is an entity that, when attached to an identity or resource, defines their permissions.
 
-#### Fields
+## Fields
 
-| Field              | Type     | Description                                                                                                                                                               |
-| :----------------- | :------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `Entities`         | `Map`    | This has three keys, `PolicyGroups`, `PolicyRoles`, and `PolicyUsers`. Each key maps to a list of IAM groups, roles, or users respectively that have the policy attached. |
-| `AttachmentCount`  | `Int`    | The number of entities \(users, groups, and roles\) that the policy is attached to.                                                                                       |
-| `DefaultVersionId` | `String` | The identifier for the version of the policy that is set as the default version.                                                                                          |
-| `Description`      | `String` | A friendly description of the policy.                                                                                                                                     |
-| `IsAttachable`     | `Bool`   | Specifies whether the policy can be attached to an IAM user, group, or role.                                                                                              |
-| `Path`             | `String` | The path to the policy.                                                                                                                                                   |
-| `PolicyDocument`   | `String` | A JSON policy document describing what permissions this policy grants.                                                                                                    |
-| `UpdateDate`       | `String` | The date and time, in ISO 8601 date-time format, when the policy was last updated.                                                                                        |
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `Entities` | `Map` | This has three keys, `PolicyGroups`, `PolicyRoles`, and `PolicyUsers`. Each key maps to a list of IAM groups, roles, or users respectively that have the policy attached. |
+| `AttachmentCount` | `Int` | The number of entities \(users, groups, and roles\) that the policy is attached to. |
+| `DefaultVersionId` | `String` | The identifier for the version of the policy that is set as the default version. |
+| `Description` | `String` | A friendly description of the policy. |
+| `IsAttachable` | `Bool` | Specifies whether the policy can be attached to an IAM user, group, or role. |
+| `Path` | `String` | The path to the policy. |
+| `PolicyDocument` | `String` | A JSON policy document describing what permissions this policy grants. |
+| `UpdateDate` | `String` | The date and time, in ISO 8601 date-time format, when the policy was last updated. |
 
-#### Example
+## Example
 
 ```javascript
 {
@@ -64,3 +64,4 @@ This resource represents an IAM policy, which is an entity that, when attached t
     "UpdateDate": "2019-01-01T00:00:00Z"
 }
 ```
+

@@ -1,123 +1,83 @@
 # CloudFormation Stack
 
-#### Resource Type
+## Resource Type
 
 `AWS.CloudFormation.Stack`
 
-#### Resource ID Format
+## Resource ID Format
 
 For CloudFormation Stacks, the resource ID is the ARN.
 
 `arn:aws:cloudformation:ap-northeast-2:123456789012:stack/example-stack/11111111`
 
-#### Background
+## Background
 
 A stack is a collection of AWS resources that you can manage as code within a template.
 
-#### Fields
+## Fields
+
+| Field | Type | Description |
+| :--- | :--- | :--- |
+
+
+| `Capabilities` | `List` | Certain capabilities required in order for AWS CloudFormation to create the stack. |
+| :--- | :--- | :--- |
+
+
+| `ChangeSetId` | `String` | The ID of the change set |
+| :--- | :--- | :--- |
+
+
+| `DeletionTime` | `Time` | The time the stack was deleted. |
+| :--- | :--- | :--- |
+
+
+| `Description` | `String` | A user-defined description associated with the stack. |
+| :--- | :--- | :--- |
+
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Field</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><code>Capabilities</code>
-      </td>
-      <td style="text-align:left"><code>List</code>
-      </td>
-      <td style="text-align:left">Certain capabilities required in order for AWS CloudFormation to create
-        the stack.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>ChangeSetId</code>
-      </td>
-      <td style="text-align:left"><code>String</code>
-      </td>
-      <td style="text-align:left">The ID of the change set</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>DeletionTime</code>
-      </td>
-      <td style="text-align:left"><code>Time</code>
-      </td>
-      <td style="text-align:left">The time the stack was deleted.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>Description</code>
-      </td>
-      <td style="text-align:left"><code>String</code>
-      </td>
-      <td style="text-align:left">A user-defined description associated with the stack.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>DisableRollback</code>
-      </td>
-      <td style="text-align:left"><code>Bool</code>
-      </td>
-      <td style="text-align:left">
+      <th style="text-align:left"><code>DisableRollback</code>
+      </th>
+      <th style="text-align:left"><code>Bool</code>
+      </th>
+      <th style="text-align:left">
         <p>Boolean to enable or disable rollback on stack creation failures: <code>true</code>disables
           rollback,</p>
         <p><code>false</code> enables rollback.</p>
-      </td>
+      </th>
     </tr>
-    <tr>
-      <td style="text-align:left"><code>DriftInformation</code>
-      </td>
-      <td style="text-align:left"><code>Map</code>
-      </td>
-      <td style="text-align:left"><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_StackDriftInformation.html">Information</a> on
-        whether a stack&apos;s actual configuration differs from its expected configuration</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>EnableTerminationProtection</code>
-      </td>
-      <td style="text-align:left"><code>Bool</code>
-      </td>
-      <td style="text-align:left">Whether termination protection is enabled for the stack.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>LastUpdatedTime</code>
-      </td>
-      <td style="text-align:left"><code>Time</code>
-      </td>
-      <td style="text-align:left">The time the stack was last updated. This field will only be returned
-        if the stack has been updated at least once.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>NotificationARNs</code>
-      </td>
-      <td style="text-align:left"><code>List</code>
-      </td>
-      <td style="text-align:left">SNS topic ARNs to which stack related events are published.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>Outputs</code>
-      </td>
-      <td style="text-align:left"><code>List</code>
-      </td>
-      <td style="text-align:left">A list of <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Output.html">output</a> structures.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>RoleARN</code>
-      </td>
-      <td style="text-align:left"><code>String</code>
-      </td>
-      <td style="text-align:left">The associated IAM service role.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>Drifts</code>
-      </td>
-      <td style="text-align:left"><code>List</code>
-      </td>
-      <td style="text-align:left">Details on the drifted resources.</td>
-    </tr>
-  </tbody>
-</table>#### Example
+  </thead>
+  <tbody></tbody>
+</table>| `DriftInformation` | `Map` | [Information](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_StackDriftInformation.html) on whether a stack's actual configuration differs from its expected configuration |
+| :--- | :--- | :--- |
+
+
+| `EnableTerminationProtection` | `Bool` | Whether termination protection is enabled for the stack. |
+| :--- | :--- | :--- |
+
+
+| `LastUpdatedTime` | `Time` | The time the stack was last updated. This field will only be returned if the stack has been updated at least once. |
+| :--- | :--- | :--- |
+
+
+| `NotificationARNs` | `List` | SNS topic ARNs to which stack related events are published. |
+| :--- | :--- | :--- |
+
+
+| `Outputs` | `List` | A list of [output](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Output.html) structures. |
+| :--- | :--- | :--- |
+
+
+| `RoleARN` | `String` | The associated IAM service role. |
+| :--- | :--- | :--- |
+
+
+| `Drifts` | `List` | Details on the drifted resources. |
+| :--- | :--- | :--- |
+
 
 ```javascript
 {
@@ -173,3 +133,4 @@ A stack is a collection of AWS resources that you can manage as code within a te
     "TimeoutInMinutes": null
 }
 ```
+

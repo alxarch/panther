@@ -1,33 +1,33 @@
 # Redshift Cluster
 
-#### Resource Type
+## Resource Type
 
 `AWS.Redshift.Cluster`
 
-#### Resource ID Format
+## Resource ID Format
 
 For Redshift Clusters, the resource ID is the ARN.
 
 `arn:aws:redshift:us-west-2:123456789012:cluster:example-cluster`
 
-#### Background
+## Background
 
 An Amazon Redshift data warehouse is a collection of computing resources called nodes, which are organized into a group called a cluster. Each cluster runs an Amazon Redshift engine and contains one or more databases.
 
-#### Fields
+## Fields
 
 The fields below include a [Redshift Cluster](https://docs.aws.amazon.com/redshift/latest/APIReference/API_Cluster.html) with its Logging Status \(detailed below\).
 
-| Field                        | Type     | Description                                               |
-| :--------------------------- | :------- | :-------------------------------------------------------- |
-| `BucketName`                 | `String` | The name of the S3 bucket where the log files are stored. |
-| `LastFailureMessage`         | `String` | The message indicating that logs failed to be delivered.  |
-| `LastFailureTime`            | `Time`   | The last time when logs failed to be delivered.           |
-| `LastSuccessfulDeliveryTime` | `Time`   | The last time that logs were delivered.                   |
-| `LoggingEnabled`             | `Bool`   | true if logging is on, false if logging is off.           |
-| `S3KeyPrefix`                | `String` | The prefix applied to the log file names.                 |
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `BucketName` | `String` | The name of the S3 bucket where the log files are stored. |
+| `LastFailureMessage` | `String` | The message indicating that logs failed to be delivered. |
+| `LastFailureTime` | `Time` | The last time when logs failed to be delivered. |
+| `LastSuccessfulDeliveryTime` | `Time` | The last time that logs were delivered. |
+| `LoggingEnabled` | `Bool` | true if logging is on, false if logging is off. |
+| `S3KeyPrefix` | `String` | The prefix applied to the log file names. |
 
-#### Example
+## Example
 
 ```javascript
 {
@@ -123,3 +123,4 @@ The fields below include a [Redshift Cluster](https://docs.aws.amazon.com/redshi
     "VpcSecurityGroups": null
 }
 ```
+

@@ -4,28 +4,28 @@ description: Amazon Machine Image
 
 # EC2 AMI
 
-#### Resource Type
+## Resource Type
 
 `AWS.EC2.AMI`
 
-#### Resource ID Format
+## Resource ID Format
 
 For EC2 AMIs, the resource ID is the ARN.
 
 `arn:aws:ec2:us-west-2:123456789012:image/ami-1`
 
-#### Background
+## Background
 
 EC2 AMIs contain information required to launch an instance.
 
-#### Fields
+## Fields
 
-| Field             | Type     | Description                                                                                                                           |
-| :---------------- | :------- | :------------------------------------------------------------------------------------------------------------------------------------ |
-| `ImageOwnerAlias` | `String` | The AWS account alias or the AWS account ID of the AMI owner                                                                          |
-| `OwnerId`         | `String` | The AWS account ID of the image owner.                                                                                                |
-| `Public`          | `Bool`   | Indicates whether the image has public launch permissions                                                                             |
-| `State`           | `String` | The current state of the AMI. If the state is `available`, the image is successfully registered and can be used to launch an instance |
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `ImageOwnerAlias` | `String` | The AWS account alias or the AWS account ID of the AMI owner |
+| `OwnerId` | `String` | The AWS account ID of the image owner. |
+| `Public` | `Bool` | Indicates whether the image has public launch permissions |
+| `State` | `String` | The current state of the AMI. If the state is `available`, the image is successfully registered and can be used to launch an instance |
 
 ```javascript
 {
@@ -75,3 +75,4 @@ EC2 AMIs contain information required to launch an instance.
     "VirtualizationType": "hvm"
 }
 ```
+

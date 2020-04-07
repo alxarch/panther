@@ -4,28 +4,28 @@ description: Elastic Compute Cloud (EC2) Virtual Private Cloud (VPC) Network ACL
 
 # EC2 Network ACL
 
-#### Resource Type
+## Resource Type
 
 `AWS.EC2.NetworkACL`
 
-#### Resource ID Format
+## Resource ID Format
 
 For EC2 Network ACLs, the resource ID is the ARN.
 
 `arn:aws:ec2:us-west-2:123456789012:network-acl/acl-1`
 
-#### Background
+## Background
 
 This resource represents a snapshot of an AWS EC2 VPC NetworkACL.
 
-#### Fields
+## Fields
 
-| Field       | Type   | Description                                                                |
-| :---------- | :----- | :------------------------------------------------------------------------- |
-| `Entries`   | `List` | Individual Network ACL rules to allow or block traffic                     |
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `Entries` | `List` | Individual Network ACL rules to allow or block traffic |
 | `IsDefault` | `Bool` | Whether this Network ACL is the default Network ACL for its associated VPC |
 
-#### Example
+## Example
 
 ```javascript
 {
@@ -79,3 +79,4 @@ This resource represents a snapshot of an AWS EC2 VPC NetworkACL.
     "VpcId": "vpc-1"
 }
 ```
+

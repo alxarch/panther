@@ -1,10 +1,10 @@
 # Config Recorder
 
-#### Resource Type
+## Resource Type
 
 `AWS.Config.Recorder`
 
-#### Resource ID Format
+## Resource ID Format
 
 For Config Recorder resources, the resource ID is constructed as such:
 
@@ -16,18 +16,18 @@ Example:
 
 This allows you to differentiate between Config Recorder resources across all AWS accounts you have linked by looking at the characters before the first colon, and to differentiate between Config Recorder resources within an account by looking at the characters between the first and second colon.
 
-#### Background
+## Background
 
 This resource represents an AWS Config Recorder in a single region.
 
-#### Fields
+## Fields
 
-| Field            | Description                                                                                             |
-| :--------------- | :------------------------------------------------------------------------------------------------------ |
-| `RecordingGroup` | Settings on the configuration recorder's group                                                          |
-| `Status`         | Indicates whether this recorder is enabled, its name, and the most recent timestamps of certain events. |
+| Field | Description |
+| :--- | :--- |
+| `RecordingGroup` | Settings on the configuration recorder's group |
+| `Status` | Indicates whether this recorder is enabled, its name, and the most recent timestamps of certain events. |
 
-#### Example
+## Example
 
 ```javascript
 {
@@ -56,3 +56,4 @@ This resource represents an AWS Config Recorder in a single region.
     "TimeCreated": null
 }
 ```
+

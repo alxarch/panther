@@ -4,32 +4,32 @@ description: Elastic Compute Cloud (EC2) Virtual Private Cloud (VPC)
 
 # EC2 VPC
 
-#### Resource Type
+## Resource Type
 
 `AWS.EC2.VPC`
 
-#### Resource ID Format
+## Resource ID Format
 
 For EC2 VPCs, the resource ID is the ARN.
 
 `arn:aws:ec2:us-west-2:123456789012:vpc/vpc-1`
 
-#### Background
+## Background
 
 This resource represents a snapshot of an AWS EC2 VPC.
 
-#### Fields
+## Fields
 
-| Field                 | Type     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| :-------------------- | :------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CidrBlock`           | `IP`     | The IP range of the VPC                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| `NetworkAcls`         | `List`   | Indicates what network ACLs are set, which act as a basic firewall for the VPC. See the [AWS user documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html) for more details                                                                                                                                                                                                                                                                                                                                              |
-| `RouteTables`         | `List`   | Route tables are configured, which act as basic routing tables for the VPC. See the [AWS user documentation](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html) for more details.                                                                                                                                                                                                                                                                                                                                                 |
-| `VpcId`               | `String` | The unique identifier of the VPC                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| `SecurityGroups`      | `List`   | Security groups configured for this VPC, which act as firewalls for instances in the VPC. See the [AWS user documentation](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) for more details                                                                                                                                                                                                                                                                                                                                  |
-| `StaleSecurityGroups` | `List`   | Security groups in a VPC that are 'stale', meaning the corresponding security group or VPC peering connection has been deleted. Note that the example below lists a stale security group that is not listed in `SecurityGroups`, in practice this will not be the case. All security groups listed in `StaleSecurityGroups` will also be present in `SecurityGroups`. See the [AWS documentation](https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html#vpc-peering-stale-groups) for more details on stale security groups. |
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `CidrBlock` | `IP` | The IP range of the VPC |
+| `NetworkAcls` | `List` | Indicates what network ACLs are set, which act as a basic firewall for the VPC. See the [AWS user documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html) for more details |
+| `RouteTables` | `List` | Route tables are configured, which act as basic routing tables for the VPC. See the [AWS user documentation](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html) for more details. |
+| `VpcId` | `String` | The unique identifier of the VPC |
+| `SecurityGroups` | `List` | Security groups configured for this VPC, which act as firewalls for instances in the VPC. See the [AWS user documentation](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) for more details |
+| `StaleSecurityGroups` | `List` | Security groups in a VPC that are 'stale', meaning the corresponding security group or VPC peering connection has been deleted. Note that the example below lists a stale security group that is not listed in `SecurityGroups`, in practice this will not be the case. All security groups listed in `StaleSecurityGroups` will also be present in `SecurityGroups`. See the [AWS documentation](https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html#vpc-peering-stale-groups) for more details on stale security groups. |
 
-#### Example
+## Example
 
 ```javascript
 {
@@ -143,3 +143,4 @@ This resource represents a snapshot of an AWS EC2 VPC.
     "TimeCreated": null
 }
 ```
+

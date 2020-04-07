@@ -1,10 +1,10 @@
 # Config Recorder Meta
 
-#### Resource Type
+## Resource Type
 
 `AWS.Config.Recorder.Meta`
 
-#### Resource ID Format
+## Resource ID Format
 
 For Config Recorder Meta resources, the resource ID is constructed as such:
 
@@ -16,18 +16,18 @@ Example:
 
 This allows you to differentiate between Config Recorder Meta resources across all AWS accounts you have linked by looking at the characters before the first colon.
 
-#### Background
+## Background
 
 This resource tracks metadata on all AWS Config Recorders within an AWS account. Best practice dictates that a configuration recorder should be setup in each region, and at least one of them should track all resources.
 
-#### Fields
+## Fields
 
-| Field                 | Type   | Description                                                                                  |
-| :-------------------- | :----- | :------------------------------------------------------------------------------------------- |
-| `GlobalRecorderCount` | `Int`  | The number of AWS Config resources configured to monitor global resources within the account |
-| `Recorders`           | `List` | A list of the resource IDs of all recorders in the account                                   |
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `GlobalRecorderCount` | `Int` | The number of AWS Config resources configured to monitor global resources within the account |
+| `Recorders` | `List` | A list of the resource IDs of all recorders in the account |
 
-#### Example
+## Example
 
 ```javascript
 {
@@ -43,5 +43,5 @@ This resource tracks metadata on all AWS Config Recorders within an AWS account.
     "Tags": null,
     "TimeCreated": null
 }
-
 ```
+

@@ -4,28 +4,28 @@ description: Elastic Compute Cloud (EC2) Volume
 
 # EC2 Volume
 
-#### Resource Type
+## Resource Type
 
 `AWS.EC2.Volume`
 
-#### Resource ID Format
+## Resource ID Format
 
 For EC2 Volumes, the resource ID is the ARN.
 
 `arn:aws:ec2:us-west-2:123456789012:volume/vol-1`
 
-#### Background
+## Background
 
 This resource represents a snapshot of an AWS EC2 Volume.
 
-#### Fields
+## Fields
 
-| Field         | Type     | Description                                                                                                                                                                  |
-| :------------ | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Attachments` | `List`   | What devices this volume is attached to                                                                                                                                      |
-| `Encrypted`   | `Bool`   | Indicates whether the volume is encrypted                                                                                                                                    |
-| `KmsKeyId`    | `String` | The Amazon Resource Name \(ARN\) of the AWS Key Management Service \(AWS KMS\) customer master key \(CMK\) that was used to protect the volume encryption key for the volume |
-| `State`       | `String` | The volume state`creating | available | in-use | deleting | deleted | error`                                                                                                 |
+| Field | Type | Description |  |  |  |  |  |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| `Attachments` | `List` | What devices this volume is attached to |  |  |  |  |  |
+| `Encrypted` | `Bool` | Indicates whether the volume is encrypted |  |  |  |  |  |
+| `KmsKeyId` | `String` | The Amazon Resource Name \(ARN\) of the AWS Key Management Service \(AWS KMS\) customer master key \(CMK\) that was used to protect the volume encryption key for the volume |  |  |  |  |  |
+| `State` | `String` | The volume state\`creating | available | in-use | deleting | deleted | error\` |
 
 ```javascript
 {
@@ -80,3 +80,4 @@ This resource represents a snapshot of an AWS EC2 Volume.
     "VolumeType": "gp2"
 }
 ```
+

@@ -1,10 +1,10 @@
 # GuardDuty Detector Meta
 
-#### Resource Type
+## Resource Type
 
 `AWS.GuardDuty.Detector.Meta`
 
-#### Resource ID Format
+## Resource ID Format
 
 For GuardDuty Detector Meta resources, the resource ID is constructed as such:
 
@@ -16,17 +16,17 @@ Example:
 
 This allows you to differentiate between GuardDuty Detector Meta resources across all AWS accounts you have linked by looking at the characters before the first colon.
 
-#### Background
+## Background
 
 This resource represents some account wide information about configured AWS GuardDuty detector.
 
-#### Fields
+## Fields
 
-| Field       | Type  | Description                                                                                                                          |
-| :---------- | :---- | :----------------------------------------------------------------------------------------------------------------------------------- |
+| Field | Type | Description |
+| :--- | :--- | :--- |
 | `Detectors` | `Map` | A list of the resource IDs of GuardDuty detectors in the account, useful for determining what regions have GuardDuty enabled in them |
 
-#### Example
+## Example
 
 ```javascript
 {
@@ -41,3 +41,4 @@ This resource represents some account wide information about configured AWS Guar
     "TimeCreated": null
 }
 ```
+

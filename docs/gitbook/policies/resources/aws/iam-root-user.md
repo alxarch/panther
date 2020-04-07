@@ -4,28 +4,28 @@ description: Identity and Access Management (IAM) root User
 
 # IAM Root User
 
-#### Resource Type
+## Resource Type
 
 `AWS.IAM.RootUser`
 
-#### Resource ID Format
+## Resource ID Format
 
 For IAM root users, the resource ID is the ARN.
 
 `arn:aws:iam::123456789012:root`
 
-#### Background
+## Background
 
 This resource represents a snapshot for an AWS root user account. This is largely similar to the `AWS.IAM.User` resource, but with a few added fields. Being a separate resource type also simplifies and optimizes writing policies which apply only to the root account, a common pattern.
 
-#### Fields
+## Fields
 
-| Field              | Type  | Description                                                                                        |
-| :----------------- | :---- | :------------------------------------------------------------------------------------------------- |
+| Field | Type | Description |
+| :--- | :--- | :--- |
 | `CredentialReport` | `Map` | An AWS account credential report for this user. Implemented as a mapping of string keys to values. |
-| `VirtualMFADevice` | `Map` | Contains the `EnableDate` and `SerialNumber` of the configured virtual MFA device, if one exists.  |
+| `VirtualMFADevice` | `Map` | Contains the `EnableDate` and `SerialNumber` of the configured virtual MFA device, if one exists. |
 
-#### Example
+## Example
 
 ```javascript
 {
@@ -68,3 +68,4 @@ This resource represents a snapshot for an AWS root user account. This is largel
     }
 }
 ```
+

@@ -1,8 +1,8 @@
 # AWS S3 Bucket Has MFA Delete Enabled
 
-| Risk    | Remediation Effort |
-| :------ | :----------------- |
-| **Low** | **Low**            |
+| Risk | Remediation Effort |
+| :--- | :--- |
+| **Low** | **Low** |
 
 This policy validates that a S3 bucket has MFA Delete enabled.
 
@@ -22,4 +22,5 @@ This cannot be performed from the AWS Console or in CloudFormation
 
 **Reference**
 
-- AWS S3 Bucket [MFA Delete](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html#MultiFactorAuthenticationDelete) documentation
+* AWS S3 Bucket [MFA Delete](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html#MultiFactorAuthenticationDelete) documentation
+

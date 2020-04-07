@@ -4,25 +4,25 @@ description: Relational Database Service (RDS) Instance
 
 # RDS Instance
 
-#### Resource Type
+## Resource Type
 
 `AWS.RDS.Instance`
 
-#### Resource ID Format
+## Resource ID Format
 
 For RDS Instances, the resource ID is the ARN.
 
 `arn:aws:rds:us-west-2:123456789012:db:example-db`
 
-#### Background
+## Background
 
 AWS RDS instances are managed EC2 instances that run relational databases.
 
-#### Fields
+## Fields
 
-| Field                | Type   | Description                                                                   |
-| :------------------- | :----- | :---------------------------------------------------------------------------- |
-| `DBParameterGroups`  | `List` | The parameter groups the instance belongs to                                  |
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `DBParameterGroups` | `List` | The parameter groups the instance belongs to |
 | `SnapshotAttributes` | `List` | A list of each snapshot for the instance, and the attributes of that snapshot |
 
 ```javascript
@@ -173,3 +173,4 @@ AWS RDS instances are managed EC2 instances that run relational databases.
     ]
 }
 ```
+
