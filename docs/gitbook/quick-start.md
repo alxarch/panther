@@ -29,7 +29,7 @@ Get started with 3 quick steps!
 Clone the latest release of [Panther](https://github.com/panther-labs/panther):
 
 ```bash
-git clone https://github.com/panther-labs/panther --depth 1 --branch v1.0.0
+git clone https://github.com/panther-labs/panther --depth 1 --branch v1.0.1
 cd panther
 ```
 
@@ -77,7 +77,7 @@ Now you can sign into Panther! The URL is sent in the welcome email and also pri
 {% hint style="warning" %}
 By default, Panther generates a self-signed certificate, which will cause most browsers to present a warning page:
 
-![Self-Signed Certificate Warning](.gitbook/assets/self-signed-cert-warning.png)
+![Self-Signed Certificate Warning](.gitbook/assets/self-signed-cert-warning%20%281%29.png)
 
 Your connection _is_ encrypted, and it's generally safe to continue if the domain matches the output of the deploy command. However, the warning exists because self-signed certificates do not protect you from man-in-the-middle attacks; for this reason production deployments should provide their own ACM certificate in the `deployments/panther_config.yml` file.
 {% endhint %}
@@ -90,11 +90,11 @@ Follow the steps below to complete your setup:
 
 1. Invite your team in `Settings` &gt; `Users` &gt; `Invite User`
 2. Configure [destinations](setup/) to receive generated alerts
-3. Onboard data for [real-time log analysis](log-analysis/log-processing.md)
-4. Write custom [detection rules](log-analysis/rules/) based on internal business logic
-5. Onboard accounts for [cloud security scans](policies/scanning.md)
-6. Write [policies]() for supported [AWS resources](policies/resources/)
-7. Query collected logs with [historical search](historical-search/historical-search.md)
+3. Onboard data for [real-time log analysis](log-processing/)
+4. Write custom [detection rules](log-processing/rules.md) based on internal business logic
+5. Onboard accounts for [cloud security scans](scanning/)
+6. Write [policies](https://github.com/panther-labs/panther/tree/ad177d5f0de833129114aa5513975241819f5bc0/docs/gitbook/policies/cloud-security-overview.md) for supported [AWS resources](resources/)
+7. Query collected logs with [historical search](historical-search/)
 
 ## Deployment Options
 

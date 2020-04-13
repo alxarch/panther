@@ -4,7 +4,7 @@ Please note that all queries should be qualified with partition columns \(year, 
 
 ## Did this IP address have any activity in my network \(and in what logs\)?
 
-This is often one of the first questions asked in an investigation. Given there is some known bad indicator such as an IP address, then if there is related activity in your network/systems, a detailed investigation will be needed. Panther makes asking such questions easy using the 'all\_logs' Athena view which will search all data for the indicator of interest. Since most often the answers to these question are negative, making this a fast and efficient operation reduces investigation time. In this example the Panther field `p_any_ip_addresses` is used. Panther extracts a number of common indicator fields over all data sources into standard fields \(see [Panther Fields](panther-fields.md)\).
+This is often one of the first questions asked in an investigation. Given there is some known bad indicator such as an IP address, then if there is related activity in your network/systems, a detailed investigation will be needed. Panther makes asking such questions easy using the 'all\_logs' Athena view which will search all data for the indicator of interest. Since most often the answers to these question are negative, making this a fast and efficient operation reduces investigation time. In this example the Panther field `p_any_ip_addresses` is used. Panther extracts a number of common indicator fields over all data sources into standard fields \(see [Panther Fields](../panther-fields.md)\).
 
 ```sql
 SELECT

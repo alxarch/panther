@@ -6,11 +6,11 @@ An SQS Queue can be connected to Panther by creating a queue and granting Panthe
 
 Navigate to the AWS [SQS Console](https://console.aws.amazon.com/sqs/home) and select `Create New Queue` to create a new queue. Set the name, then configure the queue or just select the `Quick-Create Queue` button. If you wish to use an existing queue, skip this step.
 
-![](../.gitbook/assets/screen-shot-2019-11-08-at-8.23.27-am.png)
+![](../.gitbook/assets/screen-shot-2019-11-08-at-8.23.27-am%20%281%29.png)
 
 Select the newly created or existing queue you wish to send messages to, then select the `Permissions` tab and then the `Add a Permission` button:
 
-![](../.gitbook/assets/screen-shot-2019-11-08-at-8.25.01-am%20%281%29.png)
+![](../.gitbook/assets/screen-shot-2019-11-08-at-8.25.01-am%20%282%29.png)
 
 Grant the `SendMessage` permission to the principal `891530560157`:
 

@@ -14,7 +14,7 @@ Navigate to [https://api.slack.com/apps](https://api.slack.com/apps), and select
 
 After creating the app, an administrator will need to authorize its access and enable it to the appropriate channel.
 
-![](../.gitbook/assets/screen-shot-2019-10-22-at-8.05.45-am.png)
+![](../.gitbook/assets/screen-shot-2019-10-22-at-8.05.45-am%20%281%29.png)
 
 Click `Incoming Webhooks`, then enable `Activate Incoming Webhooks`
 
