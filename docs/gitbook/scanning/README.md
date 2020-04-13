@@ -11,7 +11,7 @@ Common security misconfigurations include:
 
 ## How It Works
 
-![Architecture Diagram](../.gitbook/assets/snapshot-processing-v3%20%281%29.png)
+![Architecture Diagram](../.gitbook/assets/snapshot-processing-v3%20%282%29.png)
 
 When adding a new AWS account for infrastructure monitoring, Panther first conducts a baseline scan and models resources in your account.
 
@@ -37,15 +37,15 @@ Enter your account `Name` and `AWS Account ID`.
 If you want to enable real-time scans or automatic remediation, make sure to tick the boxes here!
 {% endhint %}
 
-![](../.gitbook/assets/add-new-account-2.png)
+![](../.gitbook/assets/add-new-account-2%20%281%29.png)
 
 Click `Next`, and then download the generated template or click directly into the CloudFormation Console:
 
-![](../.gitbook/assets/add-new-account-3.png)
+![](../.gitbook/assets/add-new-account-3%20%281%29.png)
 
 Clicking the `Launch Stack` button which open [CloudFormation](https://aws.amazon.com/cloudformation/) in the AWS account you are currently logged into with pre-populated stack variables:
 
-![](../.gitbook/assets/add-new-account-cfn.png)
+![](../.gitbook/assets/add-new-account-cfn%20%281%29.png)
 
 {% hint style="info" %}
 Make sure to check the acknowledgement in the `Capabilities`box
@@ -55,7 +55,7 @@ Make sure to check the acknowledgement in the `Capabilities`box
 
 Click the `Create stack` button. After about 15 seconds, the stack's `Status` should change to `CREATE_COMPLETE`. If there is an error creating the stack, then an IAM role with the same name may already exist in your account.
 
-![](../.gitbook/assets/add-new-account-4.png)
+![](../.gitbook/assets/add-new-account-4%20%281%29.png)
 
 Back in the UI, click `Next`, and then `Save Source` to complete this setup:
 
@@ -162,7 +162,7 @@ PantherCloudFormationStackSetExecutionRole-<MASTER_ACCOUNT_REGION>
 
 Click `Next`
 
-![](../.gitbook/assets/stacksets-3.png)
+![](../.gitbook/assets/stacksets-3%20%281%29.png)
 
 Type the AWS Account IDs of the Target Accounts in the Account numbers field, separated by commas.
 

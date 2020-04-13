@@ -15,7 +15,7 @@ Panther's Log Analysis is designed for analyzing high volumes of events in real-
 
 ## How It Works
 
-![](../.gitbook/assets/logprocessingingestion-4.jpg)
+![](../.gitbook/assets/logprocessingingestion-4%20%281%29.jpg)
 
 1. Logs are written into an S3 bucket
 2. The bucket sends an S3 event notification to an SNS Topic
@@ -35,7 +35,7 @@ You can onboard as many buckets as you would like from any region.
 
 The IAM role created below will enable access to the S3 buckets containing logs:
 
-![](../.gitbook/assets/logingestioniam%20%281%29.png)
+![](../.gitbook/assets/logingestioniam%20%282%29.png)
 
 From **Log Analysis**, click **Sources**, then **Onboard Your Logs**:
 
@@ -52,7 +52,7 @@ From **Log Analysis**, click **Sources**, then **Onboard Your Logs**:
 | `S3 Prefix Filter` | `No` | The path of the files to analyze, which should not start with the `/` character |
 | `KMS Key` | `No` | If your data is encrypted using KMS-SSE, provide the ARN of the KMS key |
 
-![](../.gitbook/assets/log-analysis-iam-2.png)
+![](../.gitbook/assets/log-analysis-iam-2%20%281%29.png)
 
 Once you have filled the required and optional advanced configurations, click **Next**.
 
@@ -60,7 +60,7 @@ Once you have filled the required and optional advanced configurations, click **
 
 You can deploy the generated IAM role by either **launching the CloudFormation Stack** in the console directly, or **downloading the template** and applying it through your own pipelines.
 
-![](../.gitbook/assets/log-analysis-iam-3.png)
+![](../.gitbook/assets/log-analysis-iam-3%20%281%29.png)
 
 #### In The CloudFormation Console
 
@@ -70,7 +70,7 @@ When you click the **Launch console** link, a new tab will open in your browser 
 Make sure you sign in the same AWS Account that was provided in the previous step.
 {% endhint %}
 
-![](../.gitbook/assets/log-analysis-iam-4.png)
+![](../.gitbook/assets/log-analysis-iam-4%20%281%29.png)
 
 {% hint style="info" %}
 Make sure to check the acknowledgement in the Capabilities box on the bottom
@@ -82,7 +82,7 @@ Click the **Create stack** button. After few seconds, the stack's `Status` shoul
 
 Go back to Panther browser tab and click on **Next,** then **Save Source** to complete the setup.
 
-![](../.gitbook/assets/log-analysis-iam-5.png)
+![](../.gitbook/assets/log-analysis-iam-5%20%281%29.png)
 
 {% hint style="success" %}
 Congratulations! You have granted Panther the permissions to process your logs in S3.

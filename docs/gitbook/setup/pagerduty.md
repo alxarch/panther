@@ -14,7 +14,7 @@ To configure the PagerDuty Destination, go to the PagerDuty Service Directory co
 
 You will be presented with a service configuration page. Select the `Use our API directly` option for the Integration Type, then configure the service with a name, description, escalation policy and any other settings as you see fit:
 
-![](../.gitbook/assets/screen-shot-2019-10-22-at-10.13.49-am.png)
+![](../.gitbook/assets/screen-shot-2019-10-22-at-10.13.49-am%20%281%29.png)
 
 After the service has been created, you will be redirected to the Integrations page for that service from which you can copy out the integration key for the Panther Destinations configuration:
 

@@ -159,7 +159,7 @@ From the `Remediation` dropdown, select the remediation you wish to enable for t
 
 Now, all future failures of the policy will automatically be re-mediated with the selected remediation. In order to apply the remediation to already detected failures, you can select the `Remediate` button on a failing resource when viewing the resources for the policy.
 
-![remediate button](../.gitbook/assets/remediatebutton.png)
+![remediate button](../.gitbook/assets/remediatebutton%20%281%29.png)
 
 In order to apply the remediation to all currently failing resources, simply disable the policy then re-enable the policy to re-evaluate all resources immediately with the automatic remediation in place. Panther doesn't do this automatically for safety reasons. This way you are able to enable an automatic remediation, test it out on a few resources to make sure everything is working as intended, then apply it to all failing resources \(if desired\) with the confidence that the exact policy and remediation configurations you intend to carry out are working as intended.
 

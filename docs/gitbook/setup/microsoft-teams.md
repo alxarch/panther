@@ -16,7 +16,7 @@ Select the `Add to a team` button and you will be prompted to select a team to a
 
 Select the `Configure` button next to Incoming Webhook, and configure the name, description, and other settings as appropriate:
 
-![](../.gitbook/assets/screen-shot-2019-10-22-at-10.59.33-am%20%281%29.png)
+![](../.gitbook/assets/screen-shot-2019-10-22-at-10.59.33-am%20%282%29.png)
 
 You will be prompted to name the integration, and optionally upload an image to display. After filling out these settings, select the `Create` button:
 

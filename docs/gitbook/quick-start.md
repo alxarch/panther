@@ -41,7 +41,7 @@ cd panther
 
 The status bar will also display the Docker Icon \(on macOS\):
 
-![Docker Status](.gitbook/assets/docker-status.png)
+![Docker Status](.gitbook/assets/docker-status%20%281%29.png)
 
 For customized deployment options, [click here](quick-start.md#deployment-options).
 

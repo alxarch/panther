@@ -159,19 +159,19 @@ Navigate to Log Analysis &gt; Rules, and click `Create New` in the top right cor
 
 Keeping with the NGINX example above, set all the necessary rule attributes:
 
-![](../.gitbook/assets/write-rules-ui-2.png)
+![](../.gitbook/assets/write-rules-ui-2%20%281%29.png)
 
 ### Write Rule Body
 
 Then write our rule function with the `rule()`, `title()`, and `dedup()` functions.
 
-![](../.gitbook/assets/write-rules-ui-3.png)
+![](../.gitbook/assets/write-rules-ui-3%20%281%29.png)
 
 ### Configure Tests
 
 Finally, configure test cases to ensure our rule works as expected:
 
-![](../.gitbook/assets/write-rules-ui-4.png)
+![](../.gitbook/assets/write-rules-ui-4%20%281%29.png)
 
 And click `Create` to save the rule.
 

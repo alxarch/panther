@@ -33,7 +33,7 @@ You will then be prompted to select a destination type.
 
 Multiple destinations of the same type may be configured, such as several Slack channels or email addresses. This allows for fine grained control of destination routing.
 
-![Select the destination type](../.gitbook/assets/destination-types.png)
+![Select the destination type](../.gitbook/assets/destination-types%20%281%29.png)
 
 Next, add a `Display Name` to distinguish the destination from others in the Panther UI and select the associated severities for this destination.
 

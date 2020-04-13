@@ -22,7 +22,7 @@ The following databases are available to search from:
 
 By navigating to the AWS [Athena](https://console.aws.amazon.com/athena/home) console, you can find a set of Panther pre-built tables under the database dropdown:
 
-![Athena Tables](../.gitbook/assets/screen-shot-2020-01-22-at-2.13.07-pm%20%281%29.png)
+![Athena Tables](../.gitbook/assets/screen-shot-2020-01-22-at-2.13.07-pm%20%282%29.png)
 
 Expanding these tables will show their fields \(hover your mouse over a field to see the description\). You can use the in-browser query editor to run SQL like commands against the data:
 
@@ -36,7 +36,7 @@ If this is your first time using Athena, you will be prompted to setup a bucket 
 
 Data can now be queried to answer common questions:
 
-![Athena Query](../.gitbook/assets/screen-shot-2020-01-22-at-2.18.33-pm%20%282%29.png)
+![Athena Query](../.gitbook/assets/screen-shot-2020-01-22-at-2.18.33-pm%20%283%29.png)
 
 ## Accessing Data with AWS Glue
 
